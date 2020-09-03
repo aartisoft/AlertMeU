@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MyPlacesActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ff0000"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="@dimen/spacing_medium"
+                android:layout_weight="1"
+                android:gravity="center|center_horizontal"
+                android:paddingLeft="@dimen/spacing_medium"
+                android:text="@string/myprep"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/inviteMsg"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="#D3D3D3"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:src="@drawable/add_location" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".7"
+                android:gravity="center|left"
+                android:text="@string/xmfl"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/addNewLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:src="@drawable/ic_mode_edit"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/showhide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="5dp"
+                android:visibility="gone"
+                android:weightSum="1">
+
+
+                <TextView
+                    android:id="@+id/txt_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:paddingLeft="5dp"
+                    android:text="12th Jan 2017"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <RadioButton
+                    android:id="@+id/rbutton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:buttonTint="@color/textcolor" />
+
+                <TextView
+                    android:id="@+id/comments"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".8"
+                    android:paddingLeft="3dp"
+                    android:text="@string/myloc"
+                    android:textColor="#31B946"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".5">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/myPlaceList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:clipToPadding="false"
+                        android:paddingTop="8dp"
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".5">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <fragment
+                            android:id="@+id/googleMap"
+                            android:name="com.google.android.gms.maps.SupportMapFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/spacing_large"
+                            android:visibility="gone"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+                            android:weightSum="1">
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_weight=".1"
+                                android:src="@drawable/add_location" />
+
+                            <EditText
+                                android:id="@+id/nameOfThePlace"
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_weight=".8"
+                                android:background="@drawable/edittextstyle_for_bank"
+                                android:hint="@string/xcfl"
+                                android:inputType="textCapSentences"
+                                android:maxLength="120"
+                                android:textStyle="bold"
+                                android:textSize="15sp"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:id="@+id/sendData"
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_weight=".1"
+                                android:layout_marginRight="30dp"
+                                android:src="@drawable/send_black"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/locationMarker"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:id="@+id/locationMarkertext"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/rounded_corner_map"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:text=""
+                                android:textColor="@android:color/white"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:id="@+id/showhide1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/add_location" />
+                        </LinearLayout>
+
+
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

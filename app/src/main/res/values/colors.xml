@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#D9D9D9</color>
+    <color name="colorPrimaryDark">#FF0003</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="bg_spnner">#223458</color>
+    <color name="bg_color">#2F4159</color>
+    <color name="white">#FFFFFF</color>
+    <color name="textcolor">#060000</color>
+    <color name="color_faintgray">#809E9E9E</color>
+    <color name="dashboard_card_color">#E6E6DC</color>
+    <color name="QRCodeWhiteColor">#ffffff</color>
+
+    <color name="QRCodeBlackColor">#000000</color>
+
+    <color name="colorTextPrimary">#000000</color>
+    <color name="colorTextDisable">#FFFFFF</color>
+
+    <color name="text_c">#060000</color>
+</resources>

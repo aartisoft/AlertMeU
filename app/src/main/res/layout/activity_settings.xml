@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.SettingsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff0000"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="@dimen/spacing_medium"
+            android:layout_weight="1"
+            android:gravity="center|center_horizontal"
+            android:paddingLeft="@dimen/spacing_medium"
+            android:text="@string/xqs"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="#D3D3D3"
+                android:weightSum="1">
+
+                <ImageView
+                    android:id="@+id/notifyOn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/notifications_active" />
+                <ImageView
+                    android:id="@+id/notifyOff"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:visibility="gone"
+                    android:src="@drawable/notifications_off" />
+                <TextView
+                    android:id="@+id/ntext"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".6"
+                    android:gravity="center|left"
+                    android:text=""
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+
+                <ToggleButton
+                    android:id="@+id/onoffTongleButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:paddingTop="5dp"
+                    android:checked="true"
+                    android:paddingBottom="5dp"
+                     />
+            </LinearLayout>
+    <LinearLayout
+        android:id="@+id/inviteMsg"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="#D3D3D3"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:src="@drawable/my_loction_icon" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".7"
+            android:gravity="center|left"
+            android:text="@string/xmfl"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/addNewLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".1"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_mode_edit" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/showhide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="5dp"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+
+            <TextView
+                android:id="@+id/txt_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:paddingLeft="5dp"
+                android:text="12th Jan 2017"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:visibility="gone"
+                android:textStyle="bold" />
+            <RadioButton
+                android:id="@+id/rbutton"
+                android:layout_width="0dp"
+                android:layout_weight=".2"
+                android:buttonTint="@color/textcolor"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/comments"
+                android:layout_width="0dp"
+                android:layout_weight=".8"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:textColor="#31B946"
+                android:textSize="16sp"
+                android:text="@string/myloc"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/myPlaceList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:clipToPadding="false"
+            android:paddingTop="8dp"
+
+            />
+
+    </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="#D3D3D3"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/date_range" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".7"
+                    android:gravity="center|left"
+                    android:text="@string/xsd"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/chktoday"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:layout_marginRight="@dimen/spacing_large"
+                    android:layout_marginLeft="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/xfd"/>
+                <CheckBox
+                    android:id="@+id/chktomorrow"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:layout_marginRight="@dimen/spacing_large"
+                    android:layout_marginLeft="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/xft"/>
+                <CheckBox
+                    android:id="@+id/chkoneweek"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:layout_marginRight="@dimen/spacing_large"
+                    android:layout_marginLeft="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/xfnw"/>
+                <CheckBox
+                    android:id="@+id/chktwoweek"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:layout_marginRight="@dimen/spacing_large"
+                    android:layout_marginLeft="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/xfntw"/>
+            </LinearLayout>
+</LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".activity.RegisterNGetStartActivity">
+
+    <!-- Header aligned to top -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ff0000"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="@dimen/spacing_medium"
+                android:layout_weight="1"
+                android:gravity="center|center_horizontal"
+                android:paddingLeft="@dimen/spacing_medium"
+                android:text="@string/regTitle"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/sv1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/layoutHide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="2dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+
+                <EditText
+                    android:id="@+id/u_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="@string/regMobileNo"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textColorHint="@drawable/selector" />
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_xxxlarge"
+                    android:layout_marginRight="@dimen/spacing_xxxlarge"
+                    android:background="@null"
+                    app:ccp_autoDetectCountry="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:gravity="center"
+                    android:text="@string/xrcp"
+                    android:textColor="#4AA7F1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <EditText
+                        android:id="@+id/uReferral"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_xsmall"
+                        android:layout_weight="1"
+                        android:editable="false"
+                        android:gravity="center"
+                        android:hint="@string/regReEnterReferral"
+                        android:inputType="textCapWords"
+                        android:singleLine="true"
+                        android:textColorHint="@drawable/selector" />
+
+                    <Button
+                        android:id="@+id/btnApply"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="@dimen/spacing_xsmall"
+                        android:layout_weight=".3"
+                        android:text="@string/xappy"
+                        android:textAllCaps="false"
+                        android:textColor="@color/textcolor"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/failCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:gravity="center"
+                    android:text="@string/regReferralDesc"
+                    android:textColor="#FF0000"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/usedCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:gravity="center"
+                    android:text="@string/regAllReferralDesc"
+                    android:textColor="#FF0000"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/successCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:gravity="center"
+                    android:text="@string/regReferralDescS"
+                    android:textColor="#4AA7F1"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/warning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/regReWarning"
+                    android:textColor="#ff0000"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/regNext"
+                android:textAllCaps="false"
+                android:textColor="@color/textcolor"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tnc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/regDescOne" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/signGuestButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:drawableLeft="@drawable/small_alert"
+                    android:text="@string/regGuestUser"
+                    android:textAllCaps="false"
+                    android:textColor="@color/textcolor"
+                    android:textSize="16sp" />
+
+                <com.google.android.gms.common.SignInButton
+                    android:id="@+id/btn_sign_in"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="30dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+
+
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/clickitem"
+    android:orientation="vertical"
+    android:padding="3dp">
+
+    <ImageView
+        android:id="@+id/image_mobile"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:adjustViewBounds="true" />
+
+
+    <TextView
+        android:id="@+id/text_mobile_model"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollHorizontally="false"
+        android:maxEms="8"/>
+
+    <!-- android:maxLines="4"
+           android:lines="4"
+           android:scrollHorizontally="false"
+           android:maxEms="8"-->
+
+</LinearLayout>

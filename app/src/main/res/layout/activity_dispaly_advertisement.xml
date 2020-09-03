@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity__new__updates"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".activity.DispalyAdvertisementActivity">
+    <!--..........................................-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff0000"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="@dimen/spacing_medium"
+            android:layout_weight=".9"
+            android:gravity="center|center_horizontal"
+            android:paddingLeft="@dimen/spacing_medium"
+            android:text="@string/advertTilte"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/maps"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".1"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/map_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_medium"
+        android:layout_marginRight="@dimen/spacing_medium"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:orientation="vertical">
+
+        <Spinner
+            android:id="@+id/spinnerMainCategory"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:background="@drawable/custom_spinner_background"
+            android:popupBackground="@color/white"
+            android:spinnerMode="dropdown"
+            android:textColor="@android:color/black" />
+
+        <Spinner
+            android:id="@+id/spinnerSubCategory"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/custom_spinner_background"
+            android:popupBackground="@color/white"
+            android:spinnerMode="dropdown"
+            android:textColor="@android:color/black" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/advertisementList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingTop="8dp"
+
+            />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

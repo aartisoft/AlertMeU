@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginRight="5dp"
+    android:descendantFocusability="beforeDescendants">
+
+    <LinearLayout
+        android:id="@+id/layout_quotation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_background_selector"
+        android:descendantFocusability="afterDescendants"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp"
+            android:orientation="vertical"
+            android:padding="2dp">
+
+
+            <LinearLayout
+                android:id="@+id/hideShow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageView
+                    android:id="@+id/playVideo"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight=".1"
+                    android:src="@drawable/baseline_play_circle_outline_black_24" />
+
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".8"
+                    android:gravity="left|center"
+                    android:paddingLeft="3dp"
+                    android:text="sdasd"
+                    android:textColor="@color/textcolor"
+                    android:textSize="16sp" />
+                <ImageView
+                    android:id="@+id/shareVideo"
+                    android:layout_width="0dp"
+                    android:layout_height="28dp"
+                    android:layout_weight=".1"
+                    android:src="@drawable/share_icon" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:gravity="left|center"
+                android:text="cxcxc"
+                android:textColor="@color/textcolor"
+                android:textSize="16sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</FrameLayout>
+
+
+
